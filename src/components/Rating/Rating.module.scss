@@ -1,0 +1,52 @@
+// src/components/Rating/Rating.module.scss
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  
+    .star {
+      display: flex;
+      position: relative;
+      width: 20px;
+      height: 20px;
+  
+      .half {
+        width: 50%;
+        overflow: hidden;
+        cursor: pointer;
+  
+        span {
+          font-size: 20px;
+          color: #ccc; // Màu mặc định (ngôi sao rỗng)
+        }
+  
+        &.filled {
+          span {
+            color: #f5c518; // Màu vàng cho ngôi sao đầy
+          }
+        }
+  
+        &:first-child {
+          span {
+            position: absolute;
+            left: 0;
+            width: 50%;
+          }
+        }
+  
+        &:last-child {
+          span {
+            position: absolute;
+            right: 0;
+            width: 50%;
+          }
+        }
+      }
+    }
+  
+    .ratingValue {
+      margin-left: 5px;
+      font-size: 14px;
+      color: #666;
+    }
+  }

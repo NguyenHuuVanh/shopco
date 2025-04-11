@@ -1,0 +1,293 @@
+.footer {
+  background-color: rgba(240, 240, 240, 1);
+  position: relative;
+
+  .newsletter {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    .newsletter-content {
+      max-width: 600px;
+      margin: 0 auto;
+
+      .newsletter-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: #2d2d2d;
+      }
+
+      .brand-section {
+        margin-bottom: 2rem;
+
+        .brand-logo {
+          font-size: 2.5rem;
+          font-weight: bold;
+          margin-bottom: 1rem;
+          color: #000;
+        }
+
+        .brand-description {
+          color: #666;
+          line-height: 1.6;
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+
+        .social-icon {
+          font-size: 1.5rem;
+          color: #666;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+
+  .links-section {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 5rem 0;
+    padding-top: 140px;
+
+    .links-container {
+      margin: 0 100px;
+      display: flex;
+      flex-flow: row;
+      gap: 106px;
+      height: 177px;
+
+      .link-group {
+        flex: 1;
+        flex-basis: 111px;
+
+        .logo-section {
+          width: 167px;
+          height: 23px;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .context {
+          display: block;
+          font-size: 1.4rem;
+          line-height: 22px;
+          font-weight: 400;
+          color: rgba(0, 0, 0, 0.6);
+          margin-top: 25px;
+          margin-bottom: 35px;
+          width: 248px;
+          height: 66px;
+        }
+
+        .link-company {
+          font-family: "Satoshi", sans-serif;
+          font-weight: 500;
+          line-height: 18px;
+          letter-spacing: 3px;
+          font-size: 1.6rem;
+          text-transform: uppercase;
+          margin-bottom: 26px;
+        }
+
+        .link-socials {
+          display: flex;
+          flex-flow: row;
+          align-items: center;
+          gap: 12px;
+
+          list-style: none;
+          padding: 0;
+
+          li {
+            width: 28px;
+            height: 28px;
+            color: #666;
+            cursor: pointer;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: #000;
+            }
+          }
+        }
+
+        .link-list {
+          display: flex;
+          gap: 20px;
+          flex-flow: column;
+          list-style-type: none;
+
+          li {
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.6);
+          }
+        }
+
+        .link-list.company {
+          width: 111px;
+        }
+
+        .link-list.help {
+          width: 147px;
+        }
+
+        .link-list.faq {
+          width: 149px;
+        }
+
+        .link-list.resources {
+          width: 161px;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+    padding-bottom: 90px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.4rem;
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .footer {
+    padding: 0 16px;
+    .newsletter {
+      margin-bottom: 2rem;
+
+      .newsletter-content {
+        max-width: 100%;
+
+        .newsletter-title {
+          font-size: 1.8rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .brand-section {
+          .brand-logo {
+            font-size: 2rem;
+          }
+
+          .brand-description {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            width: auto;
+          }
+        }
+
+        .social-icons {
+          gap: 1rem;
+        }
+      }
+    }
+
+    .links-section {
+      padding: 2.4rem 0;
+      padding-top: 18.2rem;
+
+      .links-container {
+        margin: 0;
+        display: grid;
+        grid-template-areas:
+          "col1 col1"
+          "col2 col3"
+          "col4 col5";
+        gap: 24px;
+        height: auto;
+
+        .link-group {
+          .link-company {
+            h2 {
+              font-size: 1.4em;
+              font-weight: 500;
+            }
+          }
+        }
+        // .link-group {
+        //   grid-area: myGrid;
+        //   text-align: center;
+
+        //   .logo-section {
+        //     width: 144px;
+        //     height: 20px;
+        //   }
+
+        //   .context {
+        //     width: 100%;
+        //     margin-top: 14px;
+        //     margin-bottom: 20px;
+        //     font-size: 1.4rem;
+        //     line-height: 20px;
+        //     text-align: left;
+        //     height: 40px;
+        //   }
+
+        //   .link-company {
+        //     font-size: 1.4rem;
+        //     margin-bottom: 1.5rem;
+        //   }
+
+        //   .link-list {
+        //     gap: 1rem;
+
+        //     li {
+        //       font-size: 1.4rem;
+        //     }
+        //   }
+
+        //   .link-list.company,
+        //   .link-list.help,
+        //   .link-list.faq,
+        //   .link-list.resources {
+        //     width: 100%;
+        //   }
+        // }
+        .col1 {
+          grid-area: col1;
+        }
+        .col2 {
+          grid-area: col2;
+        }
+        .col3 {
+          grid-area: col3;
+        }
+        .col4 {
+          grid-area: col4;
+        }
+        .col5 {
+          grid-area: col5;
+        }
+      }
+    }
+
+    .copyright {
+      flex-direction: column;
+      text-align: center;
+      padding-bottom: 7.8rem;
+      margin-top: 1.6rem;
+
+      p {
+        margin-top: 16px;
+        margin-bottom: 18px;
+      }
+    }
+  }
+}

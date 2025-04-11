@@ -1,0 +1,123 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  gap: 10px;
+
+  .item {
+    font-size: 1.6rem;
+  }
+}
+
+.panigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-flow: row;
+  gap: 10px;
+  list-style-type: none;
+  font-family: "Satoshi", sans-serif;
+  position: relative;
+
+  .page-item {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+
+    .page-link-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 110px;
+      height: 36px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      background-color: #fff;
+      font-weight: 500;
+      font-size: 14px;
+      font-family: "Satoshi", sans-serif;
+      color: #000;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background-color: #f3f4f6;
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      &.prev {
+        margin-right: auto;
+      }
+
+      &.next {
+        width: 86px;
+        margin-left: auto;
+
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+      span {
+        display: flex;
+        flex-flow: row;
+        font-size: 1.4rem;
+        font-weight: 500;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+    }
+
+    .page-link-btn[rel="next"] {
+      width: 86px;
+      span {
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .page-link {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+  }
+
+  .page-item:first-child {
+    position: absolute;
+    user-select: none;
+    left: 0;
+    width: 110px;
+  }
+
+  .page-item:last-child {
+    position: absolute;
+    user-select: none;
+    right: 0;
+    width: 86px;
+  }
+
+  .page-item.active {
+    background-color: rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    color: #000;
+  }
+}
